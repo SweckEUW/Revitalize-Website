@@ -1,0 +1,33 @@
+.progress_wrapper {
+    position: fixed;
+    width: 105%;
+    height: 5%;
+    top: 13.5vh;
+    z-index: 15;
+    left: -1%;
+}
+
+#progress_bar {
+    height: 5px;
+    position: relative;
+    background: transparent;
+    padding: 5px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.inner_bar {
+    display: block;
+    height: 100%;
+    background-color: #268B4D;
+    position: relative;
+    overflow: hidden;
+    width: 0%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}

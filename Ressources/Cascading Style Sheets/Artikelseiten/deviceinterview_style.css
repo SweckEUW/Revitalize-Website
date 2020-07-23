@@ -1,0 +1,33 @@
+.specials {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.specials img {
+    width: 100%;
+}
+
+.specials-overlay {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    width: 30%;
+    color: white;
+}
+
+
+.specials-overlay p {
+    display: inline-block;
+    position: relative;
+    font-size: 1.5vw;
+    margin-top: 8%;
+    color: white;
+}
+
+body {
+    background-image: url(../../Pictures/Produktseiten/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 100vh;
+}

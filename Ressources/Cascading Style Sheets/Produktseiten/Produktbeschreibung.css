@@ -1,0 +1,22 @@
+.Produktbeschreibung{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    color: #2DE0C4;
+    padding-top: 50vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Produktbeschreibung p{
+    font-size: 2vw;
+}
+
+.Produktbeschreibung h2{
+    padding-top: 10vw;
+    font-size: 2.5vw;
+}

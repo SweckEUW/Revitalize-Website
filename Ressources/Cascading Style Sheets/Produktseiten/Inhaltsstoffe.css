@@ -1,0 +1,38 @@
+#Inhaltsstoffe{
+    padding-top: 10%;
+} 
+
+.Inhaltsstoffe ul{
+    display: table;
+    text-align: center;
+    padding-left: 0%;
+}
+
+.Inhaltsstoffe li{
+    display: table-cell;
+    padding-left: 5%;
+    padding-right: 5%;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Inhaltsstoffe h2{
+    text-align: center;
+    font-size: 2.5vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Inhaltsstoffe h3{
+    font-size: 2vw;
+}
+
+.Inhaltsstoffe p{
+    font-size: 1vw;
+}

@@ -1,0 +1,218 @@
+/* Hier wird der Hintergrund der gesamten Seite und sein Verhalten zugewiesen
+Der Hintergrund wird unterhalb des Headers platziert, da der Header diesen verdecken würde,
+und wiederholt sich.*/
+html {
+    background-image: url("../../Pictures/Kategorieseiten/Produktübersicht/Background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 60vw;
+    background-size: 100vw;
+}
+
+/* Die Überschriften erster Ordnung innerhalb der Seite werden standardmößig
+auf eine bestimmte Größe und in die Mitte gesetzt. */
+main h1 {
+    font-size: 3.1vw;
+    text-align: center;
+}
+
+/* Die Überschrift, die in das Titelbild geschnitten wird, ist für das Wort "Produkte" klein als dass das
+Standard-Styling funktionieren würde, deswegen wird dies hier nocheinmal einzeln positioniert. */
+.title-headline-products{
+    position: absolute;
+    right: 20.5vw;
+    bottom: 34vw;
+}
+
+/* Die Überschrift, die in das Titelbild geschnitten wird, ist für das Wort "Produkte" klein als dass das
+Standard-Styling funktionieren würde, deswegen wird dies hier nocheinmal einzeln in der Größe bearbeitet. */
+.title-headline-products h1 {
+    color: white;
+    font-size: 10.5vw;
+}
+
+
+/* Die Sektion mit den drei animierten Blöcken wird um 10% von der Welle entfernt, die
+ diesen Inhalt sonst überdecken würde.*/
+.reason-blocks {
+    margin-top: 10%;
+}
+
+/* Der Container für alle Blöcke bekommt 100% seiner Sektion und wird zentriert. */
+.blocks-self {
+    width: 100%;
+    text-align: center;
+}
+
+/* Das Styling aller Blöcke. Sie werden nebeneinander und am oberen Rand des Containers platziert. */
+.whole-block {
+    display: inline-block;
+    position: relative;
+    width: 25%;
+    height: 32vw;
+    margin: 0 1%;
+    vertical-align: top;
+}
+
+/* Die Überschriften der Blöcke bekommen hier ihre Abstände zum Rest des Contents eines Blocks und
+ werden rückgestyled. Normalerweise wären sie vom Styling der Standard CSS-Datei betroffen, was hier
+ zum Teil revidiert wird. */
+.whole-block h2 {
+    font-weight: normal;
+    font-size: 2.5vw;
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+/* Das Styling des Textes innerhalb der Blöcke. Der Text wird responsiv vergräßert und in der Mitte
+ seines Containers platziert. Die Breite wird aus ästhetischen Gründen festgelegt.*/
+.whole-block p{
+    color: white;
+    text-align: center;
+    margin: 0 auto 5% auto;
+    font-size: 1.2vw;
+    padding-bottom: 8%;
+    padding-top: 20%;
+    width: 85%;
+}
+
+/* Die Logos in den Wellen werden auf absolute gesetzt und richtig positioniert. */
+.blocks-logos {
+    position: absolute;
+    top: 8%;
+    left: 24%;
+}
+
+/* Der Teil der Blöcke, der die Welle, die Icons und die Überschrift erhält bekommt eine Hintergrundfarbe,
+die hinter den Überschriften zu sehen ist. Zusätzlich erhält dieser Teil einen hohen z-index, um auf alle
+Fälle über dem Text zu liegen, der beim Hovern ausfährt.*/
+.wave-head {
+    position: relative;
+    background-color: #A6DDCF;
+    z-index: 14;
+}
+
+
+/* Der Block mit dem Text selbst erält diesselbe Hintergrundfarbe, einen Radius um die beiden unteren Kanten
+und wird hinter den wave-head positioniert.*/
+.wave-text {
+    position: relative;
+    background-color: #A6DDCF;
+    padding-top: 5%;
+    border-bottom-left-radius: 1.8vw;
+    border-bottom-right-radius: 1.8vw;
+    transform: translateY(-94%);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+/* Der Text des ersten Blocks fährt beim Hovern aus. */
+.wave-one:hover .wave-text {
+    transform: translateY(-30%);
+}
+
+/* Der Text des zweiten Blocks fährt beim Hovern aus. */
+.wave-two:hover .wave-text {
+    transform: translateY(-30%);
+}
+
+/* Der Text des dritten Blocks fährt beim Hovern aus. */
+.wave-three:hover .wave-text {
+    transform: translateY(-30%);
+}
+
+/* Derer Gesamtcontainer, der beide Bestandteile des Choosers hält, ist eine Flexbox. */
+.flex-product-chooser {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Die Liste der anklickbaren Tab-Buttons wird auf eine Flexbox gesetzt und
+alle darin enthaltenen Buttons als Spalten angeordnet.*/
+.product-tab-list {
+    display: flex;
+    margin-right: 0;
+    flex-direction: column;
+    width: 30%;
+}
+
+/* Das Styling der Tabbuttons. */
+.product-tab-list button {
+    border: none;
+    outline: none;
+    background-color: #C3FFEF;
+    font-size: 2.4vw;
+    color: #2DE0C4;
+    padding: 10%;
+    margin-bottom: 2%;
+}
+
+/* Dem letzten Button in der Tabliste wird seine untere Margin entzogen.
+So ist die linke Liste mit den Buttons genauso hoch wie die rechte Produktanzeige.*/
+#last-product-button {
+    margin-bottom: 0;
+}
+
+
+/* Das Hovern über die Buttons der Tabliste und das Auswählen dieser färbt sie um. */
+.product-tab-list button:hover, .product-tab-list button.active {
+    cursor: pointer;
+    background-color: #29B190;
+    color: white;
+}
+
+/* Das Styling der Inhalte, die sich durch das Klicken der Buttons der Tabliste öffnen. */
+.product-tab-content {
+    margin-left: 1.2%;
+    background-color: #C3FFEF;
+    flex-grow: 1;
+}
+
+/* Die .active-Klasse, die dem Content der Tabliste per JavaScript zugewiesen wird.
+Diese startet eine Animation und "holt den Inhalt von rechts nach links". */
+.active{
+    animation-name: move-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Die Einstellungen der Animation selbst. */
+@keyframes move-left {
+    0% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Das Styling des Logos der jeweiligen Produkte, die auf der rechten Seite auftauchen können. */
+.product-logo {
+    position: absolute;
+    left: 30%;
+    top: 4%;
+}
+
+/* Das Styling des Buttons, der den Nutzer zur Produktseite führt. */
+.go-to-product {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    float: right;
+    top: 87%;
+    border: none;
+    outline: none;
+    background: #51E0C4;
+    padding: 1.2% 5%;
+    border-radius: 0.9vw;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+/* Der Hover-Effekt des "Zum Produkt"-Buttons. */
+.go-to-product:hover {
+    background: #32734F;
+}

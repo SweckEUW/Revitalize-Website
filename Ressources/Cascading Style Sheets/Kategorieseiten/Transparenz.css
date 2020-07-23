@@ -1,0 +1,166 @@
+/* Hier wird der Hintergrund der gesamten Seite und sein Verhalten zugewiesen
+Der Hintergrund wird unterhalb des Headers platziert, da der Header diesen verdecken würde,
+und wiederholt sich nicht.*/
+html {
+    background-image: url("../../Pictures/Kategorieseiten/Transparenz/Background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 58vw;
+    background-size: 100vw;
+}
+
+/* Die Überschriften erster Ordnung innerhalb der Seite werden standardmößig
+auf eine bestimmte Größe und in die Mitte gesetzt. */
+main h1 {
+    font-size: 3.1vw;
+    text-align: center;
+}
+
+/* Die Überschrift, die in das Titelbild geschnitten wird, ist für das Wort "Transparenz" zu groß als dass das
+Standard-Styling funktionieren würde, deswegen wird dies hier nocheinmal einzeln positioniert. */
+.title-headline-specific {
+    position: absolute;
+    right: 20.5vw;
+    bottom: 34vw;
+}
+
+/* Die Überschrift, die in das Titelbild geschnitten wird, ist für das Wort "Transparenz" zu groß als dass das
+Standard-Styling funktionieren würde, deswegen wird dies hier nocheinmal einzeln in Sachen Größe bearbeitet. */
+.title-headline-specific h1 {
+    color: white;
+    font-size: 10.5vw;
+}
+
+/* Die Sektion, die alles zu Lieferanten hält, wird auf relative gesetzt um die Positionierung des Overlays
+ (absolute) einfacher zu gestalten und diese Sektion wird etwas weiter nach unten gesetzt, damit die Wellen die Überschrift nicht
+ verdecken.*/
+.lieferanten {
+    position: relative;
+    margin-top: 10%;
+}
+
+/* Die Flexbox, die das Bild und den Text daneben enthält. */
+.lieferanten-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Die Flexbox neigt dazu, Bilder in ihrem Verhältnis zu verändern, weswegen das mit der Sicherung der Höhe
+verhindert wird. */
+.lieferanten img {
+    height: 100%;
+    min-width: 45%;
+}
+
+/* Das Styling für den Text neben dem Bild. Dieser erhält etwas Abstand vom Bild.*/
+.lieferanten-text {
+    margin-left: 2%;
+}
+
+/* Um den Text an derselben Kante wie das Bild beginnen zu lassen, wird die obere Margin auf 0 gesetzt.
+ Die Schriftgröße wird responsiv aus vw gesetzt, so skaliert die Schrift mit.*/
+.lieferanten-text p {
+    margin-top: 0;
+    font-size: 1.2vw;
+}
+
+/* Der Button im Bereich "Lieferanten muss einzeln positioniert werden. */
+.lieferanten-button-container {
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Das Styling eines jeden "Mehr lesen"-Buttons. */
+.read-more {
+    cursor: pointer;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    border: none;
+    outline: none;
+    background: #51E0C4;
+    padding: 1.2% 5%;
+    border-radius: 20px;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+/* Der Hover-Effekt der "Mehr lesen"-Buttons. */
+.read-more:hover {
+    background: #32734F;
+}
+
+/* Die beiden Sektionen für "Fairtrade" und "Nachhaltigkeit" werden aus ästhetischen Gründen um 5% nach unten verschoben.
+ Zusätzlich wird die Position auf "relative" gesetzt, das macht die Positonierung absoluter Elemente einfacher. */
+.fairtrade, .nachhaltigkeit {
+    position: relative;
+    margin-top: 5%;
+}
+
+/* Das Styling des Textes über dem Bild der Farmerin. Es ist absolut positioniert und wird richtig verschoben. */
+.fairtrade-overlay {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    width: 40%;
+}
+
+/* Das Styling der Überschrift des Textes über dem Bild der Farmerin. */
+.fairtrade-overlay h1{
+    margin: 0;
+    text-align: left;
+    font-size: 3.5vw;
+    line-height: 3vw;
+    color: white;
+    }
+
+/* Das Styling des Textes über dem Bild der Farmerin. */
+.fairtrade-overlay p {
+    position: relative;
+    font-size: 1.8vw;
+    margin-top: 8%;
+    color: white;
+    width: 80%;
+}
+
+/* Der Button im Bereich "Fairtrade" muss einzeln positioniert werden. */
+.fairtrade-button-container {
+    position: absolute;
+    left: 78%;
+    bottom: 2%;
+    width: 100%;
+}
+
+/* Das Styling des Textes über dem Bild der Hand. Absolut positioniert und passend verschoben. */
+.nachhaltigkeit-overlay {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    width: 50%;
+}
+
+/* Das Styling der Überschrift des Textes über dem Bild der Hand. */
+.nachhaltigkeit-overlay h1{
+    margin: 0;
+    text-align: left;
+    font-size: 3.5vw;
+    line-height: 3vw;
+    color: white;
+}
+
+/* Das Styling des Textes über dem Bild der Hand. */
+.nachhaltigkeit-overlay p {
+    display: inline-block;
+    position: relative;
+    font-size: 1.8vw;
+    margin-top: 8%;
+    color: white;
+    width: 60%;
+}
+
+/* Der Button im Bereich "Nachhaltigkeit" muss einzeln positioniert werden. */
+.nachhaltigkeit-button-container {
+    position: absolute;
+    left: 8%;
+    bottom: 5%;
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(../../Pictures/Artikelseiten/background-image-impressum.jpg);
+    background-size: cover;
+    background-attachment: local;
+}
+
+main {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10vh;
+}
+
+.main a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    color: #29B190;
+}
+
+.main a:hover {
+    color: #27734f;
+}

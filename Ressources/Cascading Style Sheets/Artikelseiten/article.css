@@ -1,0 +1,63 @@
+main {
+    margin-top: 12%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1vw;
+}
+
+main h1 {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.title-wrapper {
+    left: 25vw;
+    top: -14vh;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 13vw;
+    z-index: 2;
+}
+
+.hero {
+    position: relative;
+    top: -5vh;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25vh;
+}
+
+.hero-wellen {
+    position: absolute;
+    top: -40vh;
+}
+
+.wave {
+    overflow: visible;
+    position: absolute;
+    bottom: -15vh;
+    left: -6%;
+    width: 112%;
+}
+
+.paragraph{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+.picture{
+    position: relative;
+    width: 60%
+}
+
+.text {
+    position: relative;
+    width: 60%;
+}

@@ -1,0 +1,64 @@
+.TitelbildContainer img{
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    margin-left: 5%;
+    width: 90vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.TitelbildContainer canvas{
+    position: absolute;
+    left: 0;
+    z-index:2;
+    display:inline-block;
+    top: 45vw;
+}
+
+.Titeltext{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    left: 0;
+    width: 100%;
+    top: -7vw;
+    font-size: 13vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+#TitelBild{
+    padding-top: 10%;  
+    display:inline-block;
+}
+
+.SlideControler{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    font-size: 6vw;
+    cursor: pointer;
+}
+
+#rightHover{
+    padding-top: 17vw;
+    padding-left: 45vw;
+    padding-bottom: 17vw;
+}
+
+#leftHover{
+    padding-top: 17vw;
+    padding-bottom: 17vw;
+    padding-right: 39.8vw;
+    padding-left: 4.2vw;
+}

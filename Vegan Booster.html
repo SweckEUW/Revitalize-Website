@@ -1,0 +1,395 @@
+<!--Produktseite 1: ein Veganer pre-workout Booster, der einen mehr energie für das Training geben soll-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">  
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">  
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Navbar2.css"> 
+
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Titelbild.css"> 
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Produktbeschreibung.css"> 
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Inhaltsstoffe.css"> 
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Nährwertangaben.css"> 
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Liferanten.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Produktseiten/Produktseite.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Script zur berechnung der Tabelle-->
+    <script src="Ressources/JavaScript/Produktseiten/NährwertKalkulator.js"></script>
+
+    <!--Script zur berechnung zufälliger Wellen auf einem Canvas Objekt-->
+    <script src="Ressources/JavaScript/Wellen Effekt/waves.js"></script>
+
+    <!--Script um die Navigations Bar zusammenzuklappen und zur änderung der Farben wenn nach unten gescrollt wird-->
+    <script src="Ressources/JavaScript/Produktseiten/NavBar2.js"></script>
+
+    <!--Script um Abschnitte sichtbar zu machen wenn man auf der scroll höhe des Abschnittes ist-->
+    <script src="Ressources/JavaScript/Produktseiten/FadeIn.js"></script>
+
+    <!--Speichert in einem Cookie die Anzahl der Produkte die in den Warenkorb geschoben werden-->
+    <script src="Ressources/JavaScript/Produktseiten/setCookie.js"></script>
+
+    <title>Vegan Boost | Revitalize</title>
+</head>
+
+<body> 
+    <header>
+       <!--Navigation Bar-->
+       <nav>
+            <ul>
+                <li><a href="Ueber uns.html" class = "navlinks">Über uns</a> <!--Link zu der Kategorieseite "Über uns"-->
+                <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li> <!--Link zu der Kategorieseite "Produkte"-->               
+                <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" id="Logo" alt="" width = 50%></a></li> <!--Logo - enthält link zur Startseite-->
+                <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li> <!--Link zu dem Revitalize Berater-->
+                <li><a href="contact.html" class = "navlinks">Kontakt</a></li> <!--Link zu einer Kontaktseite"-->
+            </ul>
+
+            <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" alt=""></a>
+            <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart.svg" class = "shopping-cart-icon" alt=""></a>
+
+            <div class="amount-of-orders">
+                <p id="WarenkorbAnzahl"></p>
+            </div>
+
+            <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+            Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+            und neben dem Warenkorb icon angezeigt-->
+            <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+            <!--Produkt Navigation Bar (Navigation Bar2) - befindet sich unter der Navigation Bar um sich auf der Produktseite zurechtzufinden-->
+            <div class="NavBar2">
+                <!--ProduktName-->
+                <a href="#" id="ProduktName" class="navlinks3"><img src="Ressources/Pictures/Produktlogos/VeganBoost.png" alt="" size=100%></a>
+
+                <!--ProduktNavigation abschnitt-->
+                <ul class = "ProduktNavigation">
+                    <a href="#scrollBeschreibung" id="NavBeschreibung" class = "navlinks">Beschreibung</a> <!--Link zum Abschnit "Beschreibung"-->
+                    <a href="#Inhaltsstoffe" id="NavZutaten"  class = "navlinks">Zutaten</a> <!--Link zum Abschnit "Zutaten"-->
+                    <a href="#Nährwertangaben" id="NavNährwerte"  class = "navlinks">Nährwerte</a> <!--Link zum Abschnit "Nährwerte"-->
+                    <a href="#Lieferanten" id="NavLieferanten"  class = "navlinks">Lieferanten</a> <!--Link zum Abschnit "Lieferanten"-->                
+                </ul>
+
+                <!--Produkt kaufen abschnitt-->
+                <div class="Kaufen">
+                    <a href="#" class = "navlinks Preis">19,99€</a> <!--Preis-->
+                    <span onclick="addProduktAmmount(0)" class = "navlinks2 InDenWarenkorb">In den Warenkorb</span> <!--Kaufen Button-->   
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!--Bilder die das Produktzeigen in einem Karussell, welches man mit Pfeiltasten bedienen kann-->
+        <div id="TitelBild" class="TitelbildContainer">
+            
+            <!--Produkt Slogan welcher aus dem Bild ragt-->
+            <h1 class="Titeltext">Natur Kick</h1> 
+
+            <!--Pfeiltasten um sich vor oder zurück im Karussell zu bewgen-->
+            <div class="SlideControler">                       
+                <div onclick="slide(-1)" id="leftHover" onmouseover="leftHover()" onmouseout="leftLeave()">&lt;</div>
+                <div onclick="slide(1)" id="rightHover" onmouseover="rightHover()" onmouseout="rightLeave()">&gt;</div>     
+            </div>
+
+            <!--Karussell Bilder-->
+            <img src="Ressources/Pictures/Produktseiten/Vegan Boost Titelbild1.jpg" class="TitelBildSlide" alt="" width="90%">
+            <img src="Ressources/Pictures/Produktseiten/Vegan Boost  Titelbild2.jpg" class="TitelBildSlide" alt="" width="90%">
+            <img src="Ressources/Pictures/Produktseiten/Vegan Boost Titelbild3.jpg" class="TitelBildSlide" alt="" width="90%">
+            <img src="Ressources/Pictures/Produktseiten/Vegan Boost  Titelbild4.jpg" class="TitelBildSlide" alt="" width="90%">
+
+            <!--großer Wellen Effekt unter dem Bild-->
+            <canvas id="myCanvas1"></canvas>
+            <script>addBigWave(myCanvas1,false);</script>    
+            <canvas id="myCanvas2"></canvas>
+            <script>addBigWave(myCanvas2);</script>    
+            <canvas id="myCanvas3"></canvas>
+            <script>addBigWave(myCanvas3);</script>    
+            
+        </div>
+
+        <script src="Ressources/JavaScript/Produktseiten/Slider.js"></script>
+
+    </header>
+
+    <main>
+         <!--Abschnitt 1: Produktbeschreibung - kurze Beschreibung des Produktes-->
+        <section id="Produktbeschreibung" class="Produktbeschreibung">
+            <p id="scrollBeschreibung"></p> <!--Link um von der Navigation Bar zum Bereich Produktbeschreibung zu gelangen-->
+
+            <!--Abschnitt Titel-->
+            <h2>Produktbeschreibung</h2> 
+
+            <!--Produktbeschreibung-->
+            <p>
+                Der Vegan Boost wurde entwickelt, um Müdigkeit zu
+                bekämpfen und das tägliche Leistungsniveau zu unterstützen.
+                Es kombiniert Vitamine mit Kräutern, die in der traditionellen
+                chinesischen Medizin verwendet werden, und ist ideal für
+                allgemeine Müdigkeit, unnachgiebige Arbeitszeiten und
+                hektischen Lebensstil.
+            </p>
+        </section>
+
+         <!--Abschnitt 2: Inhaltsstoffe/Zutaten die in dem Produkt enthalten sind-->
+        <section id="Inhaltsstoffe" class="Inhaltsstoffe">
+           
+            <!--Abschnitt Titel-->
+            <h2>Inhaltsstoffe</h2>
+
+            <ul>
+
+                <!--Inhaltsstoff 1-->
+                <li>
+                    <!--Inhaltsstoff 1 Name-->
+                    <h3>Ingwer</h3> 
+
+                    <!--Inhaltsstoff 1 Abbildung-->
+                    <img src="Ressources/Pictures/Produktseiten/Ingwer.png" alt=""width="60%"> 
+
+                    <!--Inhaltsstoff 1 Beschreibung-->
+                    <p>
+                        Ingwer ist reich an Vitamin C und enthält darüber
+                        hinaus Magnesium, Eisen, Kalzium, Kalium, Natrium
+                        und Phosphor.
+                        Das Rhizom wirkt antibakteriell und kann somit zu
+                        einer gesunden Darmflora beitragen. Ingwer wirkt
+                        außerdem virusstatisch, hemmt also die
+                        Vermehrung von Viren.
+                        Besonders die enthaltenen Scharfstoffe regen
+                        außerdem die Durchblutung und den Kreislauf an. 
+                    </p>
+                </li>
+
+                <!--Inhaltsstoff 2-->
+                <li>
+                    <!--Inhaltsstoff 2 Name-->
+                    <h3>Rote Beete</h3>
+
+                    <!--Inhaltsstoff 2 Abbildung-->
+                    <img src="Ressources/Pictures/Produktseiten/Rote Beete.png" alt="" width="60%">
+                    
+                    <!--Inhaltsstoff 2 Beschreibung-->
+                    <p>
+                        Das Rote Beete Pulver stammt aus den Knollen der
+                        Rote Beete. Die Knollen werden zuerst getrocknet
+                        und dann zu Pulver gemahlen. Da die Knollen reich
+                        an Mineralstoffen und Vitaminen sind, stärken sie
+                        unser Immunsystem und versorgen den Körper mit
+                        wichtigen Nährstoffen.
+                        Zudem ist die Rote Beete reich an Eiweiß und
+                        Ballaststoffen und enthält wenig Zucker und
+                        Kalorien.
+                    </p>
+                </li>
+
+                <!--Inhaltsstoff 3-->
+                <li>
+                    <!--Inhaltsstoff 3 Name-->
+                    <h3>Guaraná </h3>
+
+                    <!--Inhaltsstoff 3 Abbildung-->
+                    <img src="Ressources/Pictures/Produktseiten/Guaraná.png" alt="" width="60%">
+                    
+                    <!--Inhaltsstoff 3 Beschreibung-->
+                    <p>
+                        Der bedeutendste Inhaltsstoff in Guarana ist das
+                        Koffein: Zwischen 0,9 und 7,6 Prozent liegt der
+                        Koffeingehalt von Guaranapulver – und damit
+                        deutlich über dem Koffeingehalt von Kaffee, der es
+                        nur auf 1,2 bis 1,3 Prozent schafft.
+                        Noch dazu ist Koffein in Guarana für den
+                        menschlichen Körper um einiges besser verträglich
+                        als das von Kaffee.     
+                    </p>
+                </li>
+           </ul>
+        </section>
+
+        <!--Abschnitt 2: Eine Nähwerttabelle des Produktes wobei man die errechnete Menge selbst eingeben kann-->
+        <section id="Nährwertangaben" class="Nährwertangaben">
+
+             <!--Abschnitt Titel-->
+            <h2>Nährwertangaben</h2>
+
+             <!--Nährwerttabelle-->
+            <table>
+                 <!--Titel der Nährwerttabelle + Input Feld zum eingeben der errechneten Menge-->
+                <caption class="NährwertKalkulator">                
+                    <h3>Durchschnittliche Nährwerte pro   <!--Titel-->
+                    <input id="input" type="number" value="100" oninput="KalkuliereNährwerte()">    <!--Input Feld-->
+                    g</h3>   <!--Einheit-->
+                </caption>
+                
+                <!--1 Tabellen Abschnitt: Brennwert-->
+                <tr>
+                    <td><p>Brennwert</p></td>
+                    <td><p id="Brennwert">975kj/229kcal</p id="Brennwert"></td>
+                </tr>
+
+                 <!--2 Tabellen Abschnitt: Fett + davon gesättigte Fettsäuren-->
+                <tr>
+                    <td>
+                        <p>Fett</p>
+                        <p>davon gesättigte Fettsäuren</p>
+                    </td>
+
+                    <td>
+                        <p id="Fett">12,5g</p>
+                        <p id="Fettsäuren">5,4g</p>
+                    </td>
+                </tr>
+
+                 <!--3 Tabellen Abschnitt: Kohlenhydrate + davon Zucker-->
+                <tr>
+                    <td>
+                        <p>Kohlenhydrate</p>
+                        <p>davon Zucker</p>
+                    </td>
+
+                    <td>
+                        <p id="Kohlenhydrate">0,6g</p>
+                        <p id="Zucker">0,6g</p>
+                    </td>
+                </tr>
+
+                <!--4 Tabellen Abschnitt: Salz-->
+                <tr>
+                    <td><p>Salz</p> </td>
+                    <td><p id="Salz">5,0g</p id="Salz"></td>
+                </tr>
+            </table>
+
+        </section>
+
+        <!--Abschnitt 3: Lieferant der die Zutaten für das Produkt liefert-->
+        <section class="Lieferanten" id="Lieferanten">
+
+            <!--Abschnitt Titel-->
+            <h2>Lieferanten</h2>
+
+            <ul>
+                <!--Bild des Lieferanten + Wellen Effekt-->
+                <li class="LieferantenBild">
+                    <!--Bild-->
+                    <img id="myPicture2" src="Ressources/Pictures/Produktseiten/Vegan Boost  Lieferant.jpg" alt="">
+
+                    <!--Wellen Effekt-->
+                    <canvas id="myCanvas4"></canvas>
+                    <script>addWave(myCanvas4,myPicture2,0);</script>               
+                </li>
+
+                <!--Text der den Lieferanten beschreit-->
+                <li class="LieferantenText">
+
+                    <!--Lieferanten Name-->
+                    <h3>Landlinie</h3> 
+
+                    <!--Beschreibender Text-->
+                    <p>
+                        wir vertreiben seit 1989 Produkte
+                        aus biologischem Anbau für den Handel. Wir sind Ihr BioGroßhändler, der Wert auf eine faire und vertrauensvolle
+                        Zusammenarbeit mit engagierten und vor allem
+                        zertifizierten Produzenten legt.
+                        <br>
+                        <br>
+                        Wir kennen die einzelnen Anbaugebiete,
+                        Produktionsstätten und die Menschen dahinter
+                        persönlich. Aus den langjährigen Beziehungen sind sehr
+                        verlässliche Kontakte gewachsen, die es uns ermöglichen,
+                        Ihnen erstklassige Bio-Produkte anbieten zu können.
+                        <br>
+                        <br>
+                        Die LANDLINIE Lebensmittel-Vertrieb GmbH mit Sitz in
+                        Hürth bei Köln ist ein Lebensmittel-Großhandel für
+                        biologisch erzeugte Produkte und Spezialist im Bio Obst- &
+                        Gemüse-Bereich. Wir sind seit über 25 Jahren erfolgreich
+                        deutschlandweit tätig, seit 1991 Demeter
+                        Vertragshändler.
+                    </p>         
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    
+     <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+     <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+               <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

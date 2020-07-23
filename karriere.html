@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width="device-width, initial-scale=1.0">
+    <title>Karriere | Revitalize</title>
+
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/karriere_style.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/article.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/progressbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Ressources/JavaScript/Artikelseiten/progressbar_script.js"></script>
+    <script src="Ressources/JavaScript/Navigation Bar/navbar.js"></script>
+    <script src="Ressources/JavaScript/Wellen Effekt/waves.js"></script>
+</head>
+<body>
+<header>
+    <!--Die Navbar, diese sieht auf jeder Seite gleich aus und enthält
+                neben den vier relevantesten Links auch das Firmenlogo sowie den Warenkorb.-->
+    <nav>
+        <ul>
+            <li><a href="Ueber uns.html" class = "navlinks">Über uns</a>
+            <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li>
+            <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" alt="" width = 50%></a></li>
+            <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li>
+            <li><a href="contact.html" class = "navlinks">Kontakt</a></li>
+        </ul>
+
+        <div class="amount-of-orders">
+            <p id="WarenkorbAnzahl"></p id="WarenkorbAnzahl">
+        </div>
+
+        <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+        Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+        und neben dem Warenkorb icon angezeigt-->
+        <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" id = "shopping-cart-white" alt=""></a>
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Navigation Bar/ShoppingCart.svg" class = "shopping-cart-icon" id = "shopping-cart-green" alt=""></a>
+    </nav>
+</header>
+
+<!-- progressbar -->
+<section name="progress">
+    <div class="progress_wrapper">
+        <div id="progress_bar">
+            <span class="inner_bar"></span>
+        </div>
+    </div>
+</section>
+
+<main>
+    <article>
+        <div class="hero">
+            <div class="title-wrapper"><span>Karriere</span></div>
+            <img src="Ressources/Pictures/Artikelseiten/karriere_header.jpg" alt="" heigth="100%" width="100%">
+
+            <div class="wave">
+                <canvas class="hero-wellen" id="myCanvas1"></canvas>
+                <script>addBigWave(myCanvas1,false);</script>
+                <canvas class="hero-wellen"  id="myCanvas2"></canvas>
+                <script>addBigWave(myCanvas2);</script>
+                <canvas class="hero-wellen"  id="myCanvas3"></canvas>
+                <script>addBigWave(myCanvas3);</script>
+            </div>
+        </div>
+
+        <!-- first paragraph -->
+        <div class="paragraph">
+            <div class="text" style="margin-right: 10%">
+                <h2>Das erwarten wir</h2>
+                <p>
+                    Mauris et ipsum sed nibh placerat pharetra eget nec magna. Aenean posuere erat nibh, ac aliquet elit tristique eu. Donec vulputate mauris justo, in tempus lorem
+                    suscipit posuere. Praesent id orci magna. Quisque tempor nisi ut odio suscipit lacinia. Donec vitae molestie nulla. Fusce molestie bibendum gravida. Curabitur
+                    consectetur tortor ut pharetra rhoncus. Nam eget neque non massa ultricies vulputate vel tempus mi. Pellentesque semper accumsan arcu. Vivamus semper fermentum
+                    arcu, in rutrum sem suscipit at. Quisque nisl augue, auctor eget tempor id, gravida eget felis. Ut rhoncus, ante sed rhoncus ultrices, orci purus porta lorem, quis
+                    bibendum sem nibh id metus. Phasellus erat libero, euismod at porta quis, dapibus vitae odio.
+                </p>
+            </div>
+            <div class="picture">
+                <img style="width: 100%;" id="device_2" src="Ressources/Pictures/Artikelseiten/karriere1.jpg">
+            </div>
+        </div>
+
+        <!-- Second Paragraph -->
+        <div class="paragraph">
+            <div class="picture">
+                <img style="width: 100%;" class="device_1" src="Ressources/Pictures/Artikelseiten/karriere2.jpg">
+            </div>
+            <div class="text" style="margin-left: 10%;">
+                <h2>Das bieten wir</h2>
+                <p>
+                    Morbi accumsan porta nulla, non pretium metus sodales in. Ut enim massa, ullamcorper ac gravida eget, viverra quis diam. Maecenas tincidunt velit sed mauris volutpat,
+                    nec elementum libero fermentum. Nulla porttitor volutpat lorem, in mattis velit feugiat accumsan. Nullam sed euismod orci. Duis ornare, erat vel tempus luctus, magna lorem
+                    euismod metus, nec gravida tellus neque at orci. Maecenas sem nisl, fermentum eu erat sed, mollis tincidunt ipsum. Nullam sapien tortor, bibendum non nisi non, posuere pretium nibh.
+                    Cras a malesuada turpis, vitae hendrerit mi. Mauris aliquet malesuada ultricies. Cras sed sagittis urna. Morbi faucibus nibh ut dolor placerat, ut gravida purus eleifend. Donec tempus
+                    consequat nisl nec viverra. Pellentesque ultrices quam ac justo accumsan, id accumsan nisl porttitor. Nam nec vestibulum felis, nec porta lacus. Sed consectetur ligula felis, non
+                    mattis nibh eleifend sed. Orci ultrices quis. Aenean scelerisque placerat consectetur. Mauris eget dapibus purus.
+            </p>
+        </div>
+        </div>
+    </article>
+</main>
+
+    <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+    <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+                <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

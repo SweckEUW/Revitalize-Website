@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width="device-width, initial-scale=1.0">
+    <title>FairTrade | Revitalize</title>
+
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/article.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/fairtrade_style.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/progressbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Ressources/JavaScript/Artikelseiten/progressbar_script.js"></script>
+    <script src="Ressources/JavaScript/Navigation Bar/navbar.js"></script>
+    <script src="Ressources/JavaScript/Wellen Effekt/waves.js"></script>
+</head>
+<body>
+<header>
+    <!--Die Navbar, diese sieht auf jeder Seite gleich aus und enthält
+                     neben den vier relevantesten Links auch das Firmenlogo sowie den Warenkorb.-->
+    <nav>
+        <ul>
+            <li><a href="Ueber uns.html" class = "navlinks">Über uns</a>
+            <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li>
+            <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" alt="" width = 50%></a></li>
+            <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li>
+            <li><a href="contact.html" class = "navlinks">Kontakt</a></li>
+        </ul>
+
+        <div class="amount-of-orders">
+            <p id="WarenkorbAnzahl"></p>
+        </div>
+
+        <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+        Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+        und neben dem Warenkorb icon angezeigt-->
+        <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" id = "shopping-cart-white" alt=""></a>
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Navigation Bar/ShoppingCart.svg" class = "shopping-cart-icon" id = "shopping-cart-green" alt=""></a>
+    </nav>
+</header>
+
+<!-- progressbar -->
+<section name="progress">
+    <div class="progress_wrapper">
+        <div id="progress_bar">
+            <span class="inner_bar"></span>
+        </div>
+    </div>
+</section>
+
+<main>
+    <article>
+        <div class="hero">
+            <div class="title-wrapper"><span>FairTrade</span></div>
+            <img src="Ressources/Pictures/Artikelseiten/fairtrade_header.png" alt="" heigth="100%" width="100%">
+
+            <div class="wave">
+                <canvas class="hero-wellen" id="myCanvas1"></canvas>
+                <script>addBigWave(myCanvas1,false);</script>
+                <canvas class="hero-wellen"  id="myCanvas2"></canvas>
+                <script>addBigWave(myCanvas2);</script>
+                <canvas class="hero-wellen"  id="myCanvas3"></canvas>
+                <script>addBigWave(myCanvas3);</script>
+            </div>
+        </div>
+
+        <!-- first paragraph -->
+        <div class="paragraph">
+            <div class="picture">
+                <img class="fairpicture" style="width: 50%;" src="Ressources/Pictures/Artikelseiten/fairtrade.png">
+            </div>
+            <div class="text" style="margin-left: 10%;">
+                <h2>Was ist das FairTrade<span style="font-size: 1rem; position: relative; bottom: 1rem;">®</span>-Siegel?</h2>
+                <p>
+                    Suspendisse tempor augue eu nibh consequat convallis. In porta ante sed neque molestie feugiat.
+                    Aliquam diam eros, aliquam et orci sed, ullamcorper eleifend purus. Vestibulum ante ipsum primis in
+                    faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ultrices, est in convallis dignissim,
+                    enim orci tincidunt urna, id vulputate leo eros eget nisi. Duis sed augue vestibulum, mattis orci
+                    sagittis, lobortis erat. Sed mollis, mauris imperdiet dictum efficitur, mi tortor semper risus, eget
+                    sollicitudin velit sapien eget erat. Vivamus lorem metus, convallis eget est eu, hendrerit vulputate
+                    lorem.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- second paragraph -->
+        <div class="paragraph">
+            <div class="text" style="margin-right: 10%">
+                <h2>Deshalb unterstützen wir FairTrade<span style="font-size: 1rem; position: relative; bottom: 1rem;">®</span></h2>
+                <p>
+                    Sed gravida lorem sed accumsan facilisis. Maecenas et vestibulum ex, vitae molestie diam. Nunc
+                    eleifend leo sem, nec aliquet nisl dignissim sollicitudin. Nulla lacinia eget lorem sit amet
+                    facilisis. Fusce interdum auctor tincidunt. Donec sodales rutrum purus posuere ullamcorper. Donec
+                    nec nibh et tellus ornare convallis et ac justo. Class aptent taciti sociosqu ad litora torquent per
+                    conubia nostra, per inceptos himenaeos. Duis facilisis semper eleifend. Nunc eget vehicula tellus,
+                    at tincidunt est. Nunc arcu nisi, scelerisque vitae ultrices vel, fringilla a nulla. Nullam vitae
+                    arcu quis nisi hendrerit fringilla sit amet et erat. Fusce ultrices vitae nunc vitae accumsan.
+                    Maecenas vitae tempus mauris. Vivamus id suscipit ante, id ullamcorper purus.
+                </p>
+            </div>
+            <div class="picture">
+                <img style="width: 100%;"src="Ressources/Pictures/Artikelseiten/fairtrade_1.jpg">
+            </div>
+        </div>
+    </article>
+</main>
+
+    <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+    <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+                <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

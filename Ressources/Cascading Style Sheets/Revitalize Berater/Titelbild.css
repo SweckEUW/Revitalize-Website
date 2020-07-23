@@ -1,0 +1,32 @@
+.TitelbildContainer img{
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    margin-left: 5%;
+    width: 90vw;
+}
+
+.TitelbildContainer canvas{
+    position: absolute;
+    left: 0;
+    z-index:2;
+    display:inline-block;
+    top: 43vw;
+}
+
+.Titeltext{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    text-align: left;
+    z-index: 3;
+    left: 3vw;
+    width: 100%;
+    top: -10vw;
+    font-size: 16vw;
+}
+
+#TitelBild{
+    padding-top: 10%;  
+    display:inline-block;
+}

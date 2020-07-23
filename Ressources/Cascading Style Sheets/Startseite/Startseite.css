@@ -1,0 +1,340 @@
+/*Genereller Kommentar:
+Größen sind oft auf vw gesetzt, damit diese mitskalieren.
+ */
+
+
+/* Hier wird der Hintergrund der gesamten Seite und sein Verhalten zugewiesen
+Der Hintergrund wird unterhalb des Headers platziert, da der Header diesen verdecken würde,
+und wiederholt sich.*/
+html {
+    background-image: url("../../Pictures/Startseite/Background.jpg");
+    background-repeat: repeat;
+    background-position-y: 58vw;
+    background-size: 100vw;
+}
+
+/* Der Verlauf, der beim Header im Hintergrund zu sehen ist */
+.hero-gradient {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(#F3FFFC, #D5FFF4);
+    background-size: cover;
+    padding: 10% 0%;
+    z-index: 10;
+}
+
+/* Der Div-Container, der beide Bilder innerhalb des Headers beinhaltet.
+Dieser wird in der Mitte platziert. */
+.hero-container{
+    position: relative;
+    top: 15%;
+    left: 10%;
+}
+
+
+/* Die Klasse ".unleash" ist dem Schriftzug im Header zugewiesen und der hier
+ durchgeführte Befehl legt einen Abstand vom Bild mit dem Läufer von 5% fest. */
+.unleash{
+    margin-left: 8%;
+}
+
+/* Das Styling der animierten Wellen unterhalb des Headers.
+Diese werden auf absolute gesetzt und mittels z-index über den Header selbst platziert.
+Zusätzlich wird die Positionierung festgelegt.
+ */
+.hero-wellen {
+    position: absolute;
+    left: 0;
+    z-index:3;
+    display:inline-block;
+    top: 40vw;
+}
+
+/* Mittels dieser Operationen wird alles unterhalb des Headers etwas nach unten verschoben, weil die
+Wellen sonst einen Teil des Inhalts innerhalb des "main"-tags überdecken würde. */
+main {
+    margin-top: 18%;
+}
+
+/* Die Überschriften erster Ordnung innerhalb der Seite werden standardmößig
+auf eine bestimmte Größe und in die Mitte gesetzt. */
+main h1 {
+    font-size: 3.1vw;
+    text-align: center;
+}
+
+/* Dieser Befehl versteckt jeden Übersatzinhalt des Div-Elements,
+welches die Anzeige mit den vier Blöcken enthält. */
+.four-block-ad{
+    overflow: hidden;
+}
+
+/* Hier wird der Abstand der Anzeige an und für sich von ihrer Überschrift erhöht*/
+.four-block-ad h1 {
+    margin-bottom: 5%;
+}
+
+/* Das Styling der Überschriften der Vierer-Anzeige.*/
+.four-block-ad h2 {
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 2.7vw;
+    text-align: right;
+}
+
+/* Das Styling der Texte der Vierer-Anzeige
+Diese enthalten die Informationen unter den Überschriften. */
+.four-block-ad p  {
+    font-size: 1.5vw;
+}
+
+/* Die Eigenschaften des Blocks, der die erste Reihe an Inhalten für die Vierer-Anzeige enthält. */
+.first-row {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Die Eigenschaften des Bildes in der ersten Reihe der Vierer-Anzeige. */
+.first-row img {
+    display: inline-block;
+    margin-left: 5.5%;
+    width: 45%;
+}
+
+/* Die Eigenschaften des Div-Elements, das die Texte in der ersten Reihe der Vierer-Anzeige enthält. */
+.block-text-one {
+    display: inline-block;
+    float: right;
+    width: 42%;
+}
+
+/* Die Eigenschaften des Blocks, der die zweite Reihe an Inhalten für die Vierer-Anzeige enthält. */
+.second-row {
+    position: relative;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+/* Die Eigenschaften des Bildes in der zweite Reihe der Vierer-Anzeige. */
+.second-row img {
+    display: inline-block;
+    float: right;
+}
+
+/* Die Eigenschaften des Div-Elements, das die Texte in der zweiten Reihe der Vierer-Anzeige enthält. */
+.block-text-two {
+    display: inline-block;
+    float: left;
+    width: 40%;
+    height: 80%;
+}
+
+/* Die Eigenschaften des Textes, der über dem Bild der ersten Reihe der Vierer-Anzeige liegt */
+.pic-overlay-first-row {
+    position: absolute;
+    left: 0;
+    top: 12vw;
+    width: 44vw;
+}
+
+/* Die Eigenschaften des Textes unterhalb des "Wir"'s, der in dem Bild der ersten Reihe der Vierer-Anzeige liegt */
+.pic-overlay-first-row p {
+    color: white;
+    font-size: 2.5vw;
+    text-align: right;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+/* Die Eigenschaften des Textes, der über dem Bild der zweiten Reihe der Vierer-Anzeige liegt */
+.pic-overlay-second-row{
+    position: absolute;
+    left: 42vw;
+    top: 15vw;
+    width: 100%;
+}
+
+/* Die Eigenschaften des Textes unterhalb des "Wir"'s, der in dem Bild der zweiten Reihe der Vierer-Anzeige liegt */
+.pic-overlay-second-row p{
+    color: white;
+    height: auto;
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+/* Die Eigenschaften des "Wir"'s beider Overlays in der Vierer-Anzeige.
+Dieses sollte größer erscheinen als in der Text darunter. */
+.pic-overlay-wir {
+    font-size: 6vw;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.4s ease-out;
+}
+
+/* Hier wird festgelegt, dass sich beim Hovern über den Text über den Bildern eine Animation startet.
+ Gleichzeitig werden verschiedene Eigenschaften festgelegt wie die Länge der Animation. */
+.pic-overlay-wir:hover, .pic-overlay-first-row p:hover, .pic-overlay-second-row p:hover {
+    animation-name: change-color;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Hier wird diese Animation spezifiziert: die Farbe soll sich von weiß auf grün ändern. */
+@keyframes change-color {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: #43DEB9;
+    }
+}
+
+
+/* Hier wird die Sektionen mit den aktuellen Produkten aus ästhetischen Gründen etwas nach unten verschoben. */
+.products {
+    position: relative;
+    margin-top: 5%;
+}
+
+/* Diese Operation definiert den position-Value des Container des Hintergrundbildes sowie des Overlays mit dem Logo
+als "relative". Somit kann das Logo, welches über dem Hintergrund liegt, von der obersten linken Kante des Hintergrund-Bildes
+positioniert werden. */
+.products-pic-plus-overlay {
+    position: relative;
+}
+
+/* Wie bereits erwähnt, profitiert hier das Overlay der Anzeige von dem relative-Value seines
+Containers. Hier wird die Position und Breite des Containers bestimmt, in dem letztenendes das Bild selbst zu finden ist. */
+.products-overlay {
+    position: absolute;
+    left: 5vw;
+    width: 40%;
+    top: 12vw;
+}
+/* Das Styling des Buttons, der den Nutzer zur Produktseite führt. */
+.go-to-product {
+    cursor: pointer;
+    float: right;
+    border: none;
+    outline: none;
+    background: #51E0C4;
+    padding: 1.2% 5%;
+    border-radius: 0.9vw;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+/* Der Hover-Effekt des "Zum Produkt"-Buttons. */
+.go-to-product:hover {
+    background: #32734F;
+}
+
+
+/* Der Container des Buttons über der "Vegan Boost"-Anzeige. */
+.products-button-container {
+    position: absolute;
+    width: 70%;
+    bottom: 20%;
+    right: 56%;
+}
+
+/* Die Kategorie-Blöcke bekommen einen Abstand von 2% zu der Bildanzeige über ihnen und zusätzlich wird der Container,
+ der letztlich all diese Blöcke enthält, auf eine Flexbox gestellt.*/
+.category-blocks {
+     margin-top: 2%;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+}
+
+/* Das Styling der Links wird entfernt. */
+.category-blocks a{
+    text-decoration: none;
+}
+
+/* Die Schrift innerhalb der Kategorie-Blöcke wird in der Größe eingestellt und richtig positioniert. */
+.category-blocks p{
+    font-size: 2.2vw;
+    padding-right: 4%;
+    padding-top: 75%;
+}
+
+/* Die Blöcke selbst werden mit einem kleinen Trick quadratisch erstellt. Und zwar wird einfach das Padding am unteren Rand
+ soweit erhöht, dass es der Breite entspricht und so das Quadrat erzielt.*/
+.proteine, .vitamine, .komplettnahrung, .booster {
+    background-color: #C3FFEF;
+    width: 24%;
+    height: 0;
+    padding-bottom: 24%;
+    text-align: right;
+}
+
+
+/* Hovert man über die Blöcke, werden Sie dunkelgrün.*/
+.proteine:hover, .vitamine:hover, .komplettnahrung:hover, .booster:hover {
+    background-color: #29B190;
+}
+
+/* Hovert man über die Blöcke, wird die Schrift weiß. */
+.proteine:hover p, .vitamine:hover p, .komplettnahrung:hover p, .booster:hover p{
+    color: white;
+}
+
+/* Der Specials-Teil der Startseite wird aus ästhetischen Gründen nach unten verschoben. */
+.specials {
+    margin-top: 5%;
+}
+
+/* Der Container, der das Hintergrundbild und den Overlay-Text darüber enthält, wird auf relative gesetzt, damit
+die Positionierung des Overlay-Textes einfacher fällt. */
+.specials-pic-plus-overlay {
+    position: relative;
+}
+
+/* Das Text-Overlay über dem Bild wird auf "absolute" gesetzt, farblich angepasst und positioniert. */
+.specials-overlay {
+    position: absolute;
+    top: 6vw;
+    left: 7vw;
+    width: 30%;
+    color: white;
+}
+
+/* Die Überschrift erster Ordnung des Text-Overlays erhält spezielles Styling. */
+.specials-overlay h1{
+    margin: 0;
+    text-align: left;
+    font-size: 3.5vw;
+    line-height: 3vw;
+    color: white;
+}
+
+/* Die Unterüberschrift unter der Überschrift wird ein Stück nach rechts bewegt. */
+.specials-overlay span {
+    display: inline-block;
+    font-size: 2.5vw;
+    float: right;
+}
+
+/* Der eigentliche Text mit dem Inhalt des Overlays wird farblich angepasst
+und unter den BLock mit den beiden Überschriften gesetzt. */
+.specials-overlay p {
+    color: white;
+    display: inline-block;
+    position: relative;
+    font-size: 1.5vw;
+    margin-top: 8%;
+}
+
+/* Das Styling des Containers des Buttons, der den Nutzer zur Interviewseite führt. */
+.specials-button-container {
+    position: absolute;
+    width: 70%;
+    bottom: 10%;
+    right: 62%;
+}

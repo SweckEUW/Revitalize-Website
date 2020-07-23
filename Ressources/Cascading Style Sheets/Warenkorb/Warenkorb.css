@@ -1,0 +1,136 @@
+/* Hier wird der Hintergrund der gesamten Seite angepasst. */
+html {
+    background-image: linear-gradient(#F3FFFC, #D5FFF4);
+}
+
+/* Der Inhalt der Seite wird um 6% nach unten verschoben, so gibt es optischen Konflikt mit der Navbar. */
+main {
+    margin-top: 6%;
+}
+
+
+/* Das Padding für den Inhalt der Seite. Dies hat ästhetische Gründe, so klebt nicht alles am Rand der Box. */
+.kaufbereich {
+    padding: 2% 0 2% 0;
+}
+
+/* Die Flexbox für die Inhalte und den "Zur Kasse"-Button. */
+.warenkorb-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Dieser Container hält alle Produkte, die gekauft werden sollen.
+ Das flex-grow sorgt dafür, dass der linke Teil der Flexbox größer ist, so
+ haben die Inhalte darin mehr Platz. */
+.item-container {
+    flex-grow: 0.8;
+}
+
+/* Das Styling eines jeden Produkts. */
+.produkt {
+    display: block;
+    background-color: #C3FFEF;
+    padding: 1.2% 0 1.2% 1.2%;
+}
+
+/* Das Bild vom Produkt wird mit allen anderen Inhalten in eine Reihe gesetzt. */
+.produkt-bild {
+    display: inline-block;
+}
+
+/* Der Produktname bekommt ein spezielles Styling. */
+.produkt h3{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    font-size: 1.2vw;
+    width: 50%;
+}
+
+/* Der Button zum Löschen eines Produktes aus der Liste bekommt ein spezielles Styling. */
+.löschen-button {
+    vertical-align: top;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: white;
+    color: #29B190;
+    padding: 0.4vw 2.6vw;
+    border-radius: 0.9vw;
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+/* Der Hover-Effekt für den Löschen-Button. */
+.löschen-button:hover {
+    background: #29B190;
+    color: white;
+}
+
+/* Das Styling für das Input-Feld der Anzahl eines Produkts. */
+.anzahl {
+    vertical-align: top;
+    display: inline-block;
+    width: 3vw;
+    margin-left: 2%;
+}
+
+/* Das Styling für den Preis eines Produkts. */
+.produkt p {
+    margin-top: 0;
+    margin-left: 2%;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 1.2vw;
+}
+
+/* Das Styling für den Gesamtbetrag über dem "Zur Kasse"-Button. */
+.kaufen-class p {
+    font-size: 1.6vw;
+    text-align: center;
+    margin-bottom: 0.2vw;
+    font-weight: 600;
+}
+
+/* Das Styling des "Zur Kasse"- Buttons. */
+.zur-kasse-button {
+    border: none;
+    outline: none;
+    background: #51E0C4;
+    color: white;
+    padding: 0.6vw 3.4vw;
+    border-radius: 0.9vw;
+    font-weight: 600;
+    font-size: 2.4vw;
+}
+
+/* Der Hover-Effekt für den "Zur Kasse"-Button. */
+.zur-kasse-button:hover {
+    background: #32734F;
+}
+
+/* Die Breite für den Container des Textes, der den Gesamtpreis unter den Produkten anzeigt.
+ Dieser wird so breit gemacht wie die Spalte der Items breit ist.*/
+.gesamtpreis {
+    width: 75%;
+}
+
+/* Das Styling des Gesamtpreises unter den Produkten. */
+.gesamtpreis p{
+    text-align: right;
+    font-size: 1.6vw;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.produktInput{
+    text-align: right;
+    color: #29B190;
+    background: white;
+    border: 2px solid #2DE0C4;
+    border-radius: 10px;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 1.5vw; 
+}

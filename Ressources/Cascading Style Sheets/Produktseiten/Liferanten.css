@@ -1,0 +1,69 @@
+.Lieferanten{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.Lieferanten img{
+    position:absolute;
+    z-index:1;
+    width: 50vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Lieferanten canvas{
+    position:relative;
+    top: 0;
+    left: 0;
+    z-index:2;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Lieferanten ul{ 
+    text-align: center;
+    padding-left: 0;
+}
+
+.Lieferanten li{
+    display: table-cell;
+}
+
+.Lieferanten h2{
+    text-align: center;
+    font-size: 2.5vw;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Lieferanten h3{
+    font-size: 2vw;
+    text-align: left;
+    margin-top: 0;
+}
+
+.Lieferanten p{
+    font-size: 1vw;
+    text-align: left;
+}
+
+.LieferantenText{
+    padding-left: 2vw;
+    vertical-align: top;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+

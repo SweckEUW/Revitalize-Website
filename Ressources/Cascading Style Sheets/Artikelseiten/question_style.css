@@ -1,0 +1,51 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(../../Pictures/Artikelseiten/background-image-contact.jpg);
+    background-size: cover;
+    background-attachment: local;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25%;
+}
+
+main {
+    width: 70%;
+    left: 15%;
+}
+
+.button {
+    background-color: #51E0C4;
+    padding: 1% 2%;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #32734F;
+}
+
+.button:active {
+    background-color: #29B190;
+}
+
+#button_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.message {
+    margin-bottom: 20%;
+}

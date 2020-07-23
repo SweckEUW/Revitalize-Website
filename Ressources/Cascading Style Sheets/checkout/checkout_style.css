@@ -1,0 +1,169 @@
+input[type=text],
+input[type=email],
+input[type=number]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    background: transparent;
+    border: 2px solid #29B190;
+    border-radius: 10px;
+    padding: 3px;
+    outline: none;
+    margin-bottom: 5px;
+    color: #29B190;
+    width: 50%;
+    margin-right: 1vw;
+}
+
+.warning {
+    border: 3px solid #C31712;
+    background: #FF7773;
+    border-radius: 10px;
+    width: 96%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #4F0300;
+    padding-left: 1%;
+    visibility: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+html {
+    background-image: linear-gradient(#F3FFFC, #D5FFF4);
+}
+
+::placeholder {
+    color: #29B190;
+    opacity: 0.5;
+}
+
+#warenkorb {
+    width: 40%;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+
+#email,
+#land {
+    width: 96.5%;
+}
+
+#namekarte,
+#kreditnr{
+    width: 100%;
+}
+
+#mnt{
+    width: 50%;
+    margin-right: 2%;
+}
+
+#jhr {
+    position: relative;
+    width: 50%;
+    left: -0.1vw;
+}
+
+.button {
+    position: relative;
+    background-color: #51E0C4;
+    padding: 1% 2%;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: #32734F;
+}
+
+.button:active {
+    background-color: #29B190;
+}
+
+.button_bezahlen {
+    left: 32.5vw;
+}
+
+.pflicht {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-right: 2%
+}
+
+.button:active {
+    background-color: #29B190;
+}
+
+.small_button {
+    position: relative;
+    background-color: #43DEB9;
+    padding: 1% 2%;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 3%;
+    width: 33.3%
+}
+
+.small_button:active {
+    background-color: #29B190;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    margin: 5% 2% 2%;
+}
+
+#lieferadresse {
+    display: block;
+}
+
+#namekarte,
+#kreditnr {
+    width: 96%;
+}
+
+#paypal,
+#rechnung{
+    display: none;
+    padding: 0px;
+}
+
+#kreditkarte {
+    display: block;
+}
+
+.form-wrapper {
+    width: 50%;
+}
+
+.active {
+    background: transparent;
+    color: #43DEB9;
+    border: 2px solid #43DEB9;
+}
+

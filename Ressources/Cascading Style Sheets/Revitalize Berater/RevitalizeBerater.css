@@ -1,0 +1,157 @@
+html{
+    background-image: url("../../Pictures/Revitalize Berater/Background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 38vw;
+    background-size: 100vw;
+}    
+
+#RevitalizeBerater{
+    padding-top: 55vw;
+    text-align: center;
+}
+
+div{
+    transition: opacity 1s ease-out;
+}
+
+#RevitalizeBerater h1{
+    font-size: 3vw; 
+    margin-bottom: 0.2vw;
+}
+
+#RevitalizeBerater h2{
+    font-size: 2.5vw; 
+    margin-top: 0.2vw;
+    margin-bottom: 4vw;
+}
+
+#RevitalizeBerater h3{
+    font-size: 2vw;     
+}
+
+#balken{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: 70vw;
+    height: 1vw;
+    background-color: #43DEB9;
+}
+
+#circles{
+    padding-left: 0;
+}
+
+#circles li{
+    top: -7.5vw;
+    position: relative;
+    margin-left: 4.5vw;
+    margin-right: 4.5vw;
+    height: 4vw;
+    width: 4vw;
+    background-color: #43DEB9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#Einheit{
+    position: relative;
+    margin: 0;
+    top: -5vw;
+    font-size: 3vw; 
+}
+
+#BeraterInput div{
+    display: inline-block;
+    color: #43DEB9;
+    font-weight: bold;
+    font-size: 5vw;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#BeraterInput input{
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #2DE0C4;
+    color: rgb(33, 134, 119);
+    border-radius: 10px;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2vw; 
+    padding: 1vw;
+    top: -1vw;
+    margin: 5vw;
+}
+
+#fortschritt {
+    position: relative;
+    top: -5vw;
+}
+
+#InputFeld label{
+    display: inline-block;
+    font-size: 2vw; 
+}
+
+#BeraterInput .ErnährungsTypButton{
+    margin: 0%;
+    margin-right: 2vw;
+    border: 0;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+#BeraterInput .ErnährungsTypText{
+    margin: 0%;
+    margin-left: 2vw;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+#Ziel{
+    height: 5vw;
+    padding-left: 10px;
+    background-color: transparent;
+    color: #43DEB9;
+    border-color: #43DEB9;
+    font-size: 2vw;
+} 
+
+#Ziel select{
+    width:100%;
+    border: 1px solid #bbb;
+    padding:.75em 1em .5em 1em;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+    background-color:white;
+    background-image:url(select-arrow.png);
+    background-position: right;
+    background-repeat: no-repeat;
+
+    color: #43DEB9;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: transparent;
+    background: transparent;
+} 
+
+.result{
+    font-size: 1.5vw; 
+}
+
+option:not(:checked){
+    color: rgb(181, 236, 223);
+    background: transparent;
+ }
+
+option{
+    background-color: none;
+}

@@ -1,0 +1,101 @@
+.Nährwertangaben{  
+    padding-top: 10%;
+}
+
+.Nährwertangaben h2{  
+    text-align: center;   
+    font-size: 2.5vw; 
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Nährwertangaben table{
+    margin-left:auto; 
+    margin-right:auto;
+    width: 100%;
+    border-collapse: collapse;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Nährwertangaben tr{
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.Nährwertangaben td{  
+    border: 1px solid #2DE0C4;    
+    padding: 1%;   
+}
+
+.Nährwertangaben td:nth-child(even){
+    text-align: right; 
+    width: 50%;
+}
+
+.Nährwertangaben p:nth-child(n+2){
+    margin-left: 5%;
+}
+
+.Nährwertangaben p{
+    margin: 1%;
+    color: #29B190;
+    font-size: 2vw; 
+}
+
+.NährwertKalkulator h3,input{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-size: 2vw; 
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.NährwertKalkulator{
+    text-align: left;
+    font-size: 2.5vw;  
+}
+
+.NährwertKalkulator input{
+    text-align: right;
+    width: 12%;
+    color: rgb(33, 134, 119);
+    background: transparent;
+    border: 2px solid #2DE0C4;
+    border-radius: 10px;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 2vw; 
+    opacity: 0;
+    transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -webkit-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+}
+
+.NährwertKalkulator input:focus{
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}

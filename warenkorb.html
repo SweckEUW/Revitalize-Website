@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warenkorb | Revitalize</title>
+
+    <!--Unsere Website hat spezifiziertes CSS, welches für quasi alle Seiten gilt und deswegen in verschiedensten Dateien ausgelagert ist.
+Dazu zählen z.B. die Styling-Informationen der Navbar.
+Dazu hat jede Seite ihr eigenes spezifisches CSS, das nur von dieser Seite benutzt wird-->
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Warenkorb/Warenkorb.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Ressources/JavaScript/Navigation Bar/navbar.js"></script>
+</head>
+<body>
+
+    <header>
+        <!--Die Navbar, diese sieht auf jeder Seite gleich aus und enthält
+                      neben den vier relevantesten Links auch das Firmenlogo sowie den Warenkorb.-->
+        <nav>
+            <ul>
+                <li><a href="Ueber uns.html" class = "navlinks">Über uns</a>
+                <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li>
+                <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" alt="" width = 50%></a></li>
+                <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li>
+                <li><a href="contact.html" class = "navlinks">Kontakt</a></li>
+            </ul>
+
+            <div class="amount-of-orders">
+                <p id="WarenkorbAnzahl"></p>
+            </div>
+
+            <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+            Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+            und neben dem Warenkorb icon angezeigt-->
+            <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+            <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" id = "shopping-cart-white" alt=""></a>
+            <a href="warenkorb.html"><img src="Ressources/Pictures/Navigation Bar/ShoppingCart.svg" class = "shopping-cart-icon" id = "shopping-cart-green" alt=""></a>
+        </nav>
+    </header>
+
+    <!--Wie gewünscht, benutzen wir die semantischen Tags von HTML. Dies hat auch einen konkreten Vorteil:
+    Im Standard-CSS einer jeden Seite wird die Main-Sektion auf 90% gesetzt, sodass neben dem ganzen Content
+    immer der gleiche Abstand zum Bildrand besteht-->
+        <main>
+
+            <!-- Hier befindet sich alles zum Warenkorb. Links die Inhalte, rechts der Weg zur Kasse um zu bezahlen. -->
+            <section class="kaufbereich">
+                <!-- Die links-rechts-Aufteilung wird über eine Flexbox geregelt. -->
+                <div class="warenkorb-flex">
+
+                    <!-- Hier sind alle Items drin, die der Kunde kaufen könnte.
+                     Für das allgemeine Styling gibt es die Klasse "produkt". Soll ein einzelnes Produkt
+                     angesprochen werden (wenn es z.B. nicht gekauft wird und deshalb nicht sichtbar sein darf),
+                     kann display im CSS einfach auf "none" gesetzt werden. -->
+                    <div class="item-container">
+                        <div class="produkt" id = "veganwhey">
+                            <img class = "produkt-bild" src="Ressources/Pictures/Produktbilder/Whey-Dose.svg" alt="" width = "12%">
+                            <h3>Vegan Whey - Veganes Protein</h3>
+                            <button onclick="remove(1,`veganwhey`)" class = "löschen-button">Löschen</button>
+                            <input oninput="setProduktAmmount(1,`veganwhey`)" type="text" class = "anzahl produktInput">
+                            <p class="preis"></p>
+                        </div>
+
+                        <div class="produkt" id = "veganboost">
+                            <img class = "produkt-bild" src="Ressources/Pictures/Produktbilder/Boost-Dose.svg" alt="" width = "12%">
+                            <h3>Vegan Boost - Veganer Booster</h3>
+                            <button  onclick="remove(0,`veganboost`);" class = "löschen-button">Löschen</button>
+                            <input oninput="setProduktAmmount(0,`veganboost`)" type="text" class = "anzahl produktInput">
+                            <p class="preis"></p>
+                        </div>
+
+                        <div class="produkt" id="vegannutrition">
+                            <img class = "produkt-bild" src="Ressources/Pictures/Produktbilder/Nutrition-Dose.svg" alt="" width = "12%">
+                            <h3>Vegan Nutrition - Vegane Komplettnahrung</h3>
+                            <button onclick="remove(3,`vegannutrition`)" class = "löschen-button">Löschen</button>
+                            <input oninput="setProduktAmmount(3,`vegannutrition`)" type="text" class = "anzahl produktInput">
+                            <p class="preis"></p>
+                        </div>
+
+                        <div class="produkt" id = "veganvitamin">
+                            <img class = "produkt-bild" src="Ressources/Pictures/Produktbilder/Vitamin-Dose.svg" alt="" width = "12%">
+                            <h3>Vegan Vitamin - Veganes Vitaminpräperat</h3>
+                            <button onclick="remove(2,`veganvitamin`)" class = "löschen-button">Löschen</button>
+                            <input oninput="setProduktAmmount(2,`veganvitamin`)" type="text" class = "anzahl produktInput">
+                            <p class="preis"></p>
+                        </div>
+                    </div>
+
+                    <!-- Dieses Div-Element enthält den rechts befindlichen Preis und den darunterliegenden "Zur Kasse"-Button. -->
+                    <div class="kaufen-class">
+                        <p id="zuZahlen">Sie zahlen:</p>
+                        <a href="checkout.html"><button class = "zur-kasse-button">Zur Kasse</button></a>
+                    </div>
+                </div>
+
+                <!-- Unter den Produkten steht auch noch einmal der Gesamtpreis. -->
+                <div class="gesamtpreis">
+                    <p>Gesamtpreis:</p>
+                </div>
+
+                <script src="Ressources/JavaScript/Warenkorb/Warenkorb.js"></script>
+                <script>checkCookies()</script>
+            </section>
+        </main>
+
+    <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+    <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+                <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

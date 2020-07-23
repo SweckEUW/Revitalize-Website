@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width="device-width, initial-scale=1.0">
+    <title>Geschichte | Revitalize</title>
+
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/article.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/geschichte_style.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Artikelseiten/progressbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Ressources/JavaScript/Artikelseiten/progressbar_script.js"></script>
+    <script src="Ressources/JavaScript/Navigation Bar/navbar.js"></script>
+    <script src="Ressources/JavaScript/Wellen Effekt/waves.js"></script>
+</head>
+<body>
+<header>
+    <!--Die Navbar, diese sieht auf jeder Seite gleich aus und enthält
+                     neben den vier relevantesten Links auch das Firmenlogo sowie den Warenkorb.-->
+    <nav>
+        <ul>
+            <li><a href="Ueber uns.html" class = "navlinks">Über uns</a>
+            <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li>
+            <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" alt="" width = 50%></a></li>
+            <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li>
+            <li><a href="contact.html" class = "navlinks">Kontakt</a></li>
+        </ul>
+
+        <div class="amount-of-orders">
+            <p id="WarenkorbAnzahl"></p>
+        </div>
+
+        <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+        Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+        und neben dem Warenkorb icon angezeigt-->
+        <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" id = "shopping-cart-white" alt=""></a>
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Navigation Bar/ShoppingCart.svg" class = "shopping-cart-icon" id = "shopping-cart-green" alt=""></a>
+    </nav>
+</header>
+
+<!-- progressbar -->
+<section name="progress">
+    <div class="progress_wrapper">
+        <div id="progress_bar">
+            <span class="inner_bar"></span>
+        </div>
+    </div>
+</section>
+
+<main>
+    <article>
+        <div class="hero">
+            <div class="title-wrapper">Geschichte</div>
+            <img src="Ressources/Pictures/Artikelseiten/geschichte_header.jpg" alt="" heigth="100%" width="100%">
+
+            <div class="wave">
+                <canvas class="hero-wellen" id="myCanvas1"></canvas>
+                <script>addBigWave(myCanvas1,false);</script>
+                <canvas class="hero-wellen"  id="myCanvas2"></canvas>
+                <script>addBigWave(myCanvas2);</script>
+                <canvas class="hero-wellen"  id="myCanvas3"></canvas>
+                <script>addBigWave(myCanvas3);</script>
+            </div>
+        </div>
+
+        <!-- first paragraph -->
+        <div class="paragraph">
+            <div class="picture">
+                <img style="width: 100%;" src="Ressources/Pictures/Artikelseiten/geschichte1.jpg">
+            </div>
+            <div class="text" style="margin-left: 10%;">
+                <h2>Unsere Geschichte</h2>
+                <p>
+                    Nulla facilisi. Curabitur sollicitudin molestie dui. Nullam vel nisl tortor. Suspendisse in nulla
+                    eu libero auctor molestie eu sit amet sem. Donec tincidunt et sem a sagittis. Integer sit amet
+                    maximus massa. Suspendisse pretium, nisi sed gravida euismod, erat diam vestibulum ligula, sit
+                    amet interdum ante orci eu lacus. Vestibulum nec fringilla felis. Quisque augue turpis, auctor sit
+                    amet malesuada non, pellentesque cursus odio. Suspendisse potenti. In hac habitasse platea dictumst.
+                    Etiam volutpat diam id sagittis mattis. Proin ac lorem faucibus, interdum leo a, ultrices massa.
+                </p>
+
+                <p>
+                    Donec posuere mi ac risus tincidunt commodo. Vestibulum tortor ipsum, venenatis et porttitor a,
+                    semper bibendum ex. Donec non odio ac nulla gravida mattis nec in justo. Curabitur placerat odio
+                    non urna hendrerit luctus. Sed finibus felis sit amet leo aliquam, quis ultrices diam commodo. Cras
+                    ex lectus, gravida a nunc a, consectetur elementum leo. Mauris ante massa, gravida non iaculis ut,
+                    rutrum finibus lectus. Nullam pulvinar volutpat finibus. Cras vel bibendum dolor. Nunc vitae velit
+                    sodales, lobortis dolor ac, iaculis metus. Proin nec laoreet est. In hendrerit sem ac sapien ornare
+                    auctor nec nec sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                    turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae; Etiam placerat ante et ipsum tempus porttitor. Maecenas blandit metus ac elit molestie porta
+                    ac ac risus.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- second paragraph -->
+        <div class="paragraph">
+            <div class="text" style="margin-right: 10%">
+                <h2></h2>
+                <p>
+                    Donec dictum dolor ac nunc euismod feugiat. Vestibulum mauris enim, imperdiet ac urna vitae,
+                    ultrices pellentesque elit. Phasellus aliquet, arcu nec imperdiet vehicula, nulla quam lacinia nibh
+                    , quis suscipit massa augue in risus. Phasellus vitae metus non nibh cursus consectetur sed tempor
+                    nunc. Quisque mauris erat, elementum ut eros non, gravida aliquam enim. Proin non tincidunt magna.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam
+                    consectetur lectus sit amet iaculis mollis.
+                </p>
+                <p>
+                    Aliquam tempor ultrices diam elementum aliquam. Nullam ac volutpat est. Ut faucibus ex mauris, non
+                    faucibus neque bibendum luctus. Sed urna justo, convallis eu diam eget, tempor pulvinar enim.
+                    Phasellus porttitor scelerisque sem sit amet viverra. Vestibulum sapien urna, eleifend id lacus
+                    sed, imperdiet lobortis enim. Proin viverra quam leo, nec hendrerit neque molestie ac. In non
+                    ligula nulla. In hac habitasse platea dictumst. Proin non metus nec felis sodales bibendum
+                    vel sed risus.
+                </p>
+            </div>
+            <div class="picture">
+                <img style="width: 100%;"src="Ressources/Pictures/Artikelseiten/geschichte2.jpg">
+            </div>
+        </div>
+    </article>
+</main>
+
+    <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+    <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+                <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

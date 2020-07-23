@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 3vw;
+    color: #29B190;
+}
+
+h2 {
+    font-size: 2.5vw;
+    color: #29B190;
+}
+
+h3 {
+    font-size: 2vw;
+    color: #29B190;
+}
+
+p {
+    font-size: 1vw;
+    color: #29B190;
+}

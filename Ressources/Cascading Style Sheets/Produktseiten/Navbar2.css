@@ -1,0 +1,176 @@
+nav {
+    position: fixed;
+    width: 100%;
+    font-size: 1.3vw;
+    z-index: 15;
+    text-align: center;
+    transition: background-color 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.shopping-cart-icon {
+    position: absolute;
+    display: inline-block;
+    width: 1.8%;
+    top: 2vw;
+    left: 91vw;
+}
+
+nav.scroll {
+    background-color: #43DEB9;
+}
+
+.scroller {
+    color: white;
+}
+
+nav a {   
+    color: #43DEB9;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #27734f;
+}
+
+nav ul{
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 0%;
+}
+
+nav img {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 8vw;
+    top: 0vw;
+}
+
+nav .icon {
+    display: none;
+}
+
+.NavBar2 {
+    font-family: Open Sans;
+    color: #2DE0C4;
+    text-align: center;
+    z-index: 15;
+    transition: background-color 0.4s ease-out;
+}
+
+.greenBackground{
+    background-color: #43DEB9;
+}
+
+#Logo {
+    padding: 0;
+    margin: 0;
+    width: 3vw;
+}
+
+.ProduktName:hover{
+    color: currentColor;
+}
+
+.ProduktNavigation {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+}
+
+.ProduktNavigation li{
+    display: inline-block;
+    list-style: none;
+}
+
+.ProduktNavigation a{
+    text-decoration: none;
+    padding-right: 2%;
+    font-size: 1.3vw;
+    padding-left: 2%;
+}
+
+.Kaufen {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    padding-top: -1vw;
+    cursor: text;
+}
+
+.Preis{
+    pointer-events: none;
+    cursor: text;
+    position: relative;
+    top: -0.8vw;
+}
+
+.InDenWarenkorb{
+    position: relative;
+    background-color: #2DE0C4;
+    color: white;
+    border: 10px solid  #2DE0C4;
+    border-radius: 10px;
+    cursor: pointer;
+    top: -0.8vw;
+}
+
+.InDenWarenkorb:hover{
+    background-color: #27734f;
+    border: 10px solid  #27734f;
+}
+
+.InDenWarenkorb2:hover{
+    color: white;
+    background-color: #27734f;
+    border: 10px solid  #27734f;
+}
+
+.InDenWarenkorb2{ 
+    position: relative;
+    top: -0.8vw;
+    background-color: white;
+    color: #2DE0C4;
+    border:10px solid  white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ProduktName{
+    position: relative;
+    top: 0.5vw;
+}
+
+.amount-of-orders p {
+    position: relative;
+    color: white;
+    bottom: 35%;
+}
+
+.amount-color-change {
+    background-color: white;
+}
+
+.amount-color-change p {
+    color: #43DEB9;
+}
+
+.amount-of-orders {
+    position: absolute;
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    top: 1.7vw;
+    left: 93vw;
+    border-radius: 50%;
+    background-color: #43DEB9;
+}

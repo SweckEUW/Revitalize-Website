@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transparenz | Revitalize</title>
+
+    <!--Unsere Website hat spezifiziertes CSS, welches für quasi alle Seiten gilt und deswegen in verschiedensten Dateien ausgelagert ist.
+    Dazu zählen z.B. die Styling-Informationen der Navbar.
+    Dazu hat jede Seite ihr eigenes spezifisches CSS, das nur von dieser Seite benutzt wird.-->
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/StandardCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Navigation Bar/navbar.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Footer/FooterCSS.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Kategorieseiten/Transparenz.css">
+    <link rel="stylesheet" href="Ressources/Cascading Style Sheets/Standard CSS/Unterseiten Titelbild.css">
+
+    <!-- Die Font Awesome dient zur Darstellung der Social Media Icons im Footer. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src = "Ressources/JavaScript/Navigation Bar/navbar.js"></script>
+    <script src = "Ressources/JavaScript/Wellen Effekt/waves.js"></script>
+</head>
+<body>
+<header>
+    <!--Die Navbar, diese sieht auf jeder Seite gleich aus und enthält
+       neben den vier relevantesten Links auch das Firmenlogo sowie den Warenkorb.-->
+    <nav>
+        <ul>
+            <li><a href="Ueber uns.html" class = "navlinks">Über uns</a>
+            <li><a href="Produktübersicht.html" class = "navlinks">Produkte</a></li>
+            <li><a href="index.html"><img src="Ressources/Pictures/Logo/Logo.svg" alt="" width = 50%></a></li>
+            <li><a href="Revitalize Berater.html" class = "navlinks">Berater</a></li>
+            <li><a href="contact.html" class = "navlinks">Kontakt</a></li>
+        </ul>
+
+        <div class="amount-of-orders">
+            <p id="WarenkorbAnzahl"></p id="WarenkorbAnzahl">
+        </div>
+
+        <!--überprüft ob ein Cookie vorhanden ist, indem die Anzahl der Produkte gespeichert ist.
+        Erstellt ein cookie falls keines vorhanden ist. Ist ein cookie vorhanden, wird daraus die Anzahl an Produtken errechnet
+        und neben dem Warenkorb icon angezeigt-->
+        <script src="Ressources/JavaScript/Navigation Bar/Warenkorb Anzahl.js"></script>
+
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Icons/ShoppingCart-white.svg" class = "shopping-cart-icon" id = "shopping-cart-white" alt=""></a>
+        <a href="warenkorb.html"><img src="Ressources/Pictures/Navigation Bar/ShoppingCart.svg" class = "shopping-cart-icon" id = "shopping-cart-green" alt=""></a>
+    </nav>
+</header>
+
+<!--Zwischen der Navbar und dem eigentlichen Inhalt der Seite befindet sich auf allen Unterseiten ein Bild, aus dem
+die Überschrift der Unterseite "ausgeschnitten" wird. Dies wird hier eingebunden und greift für das Styling auf eine
+standatisierte CSS-Datei zu (Unterseite Titelbild.css).-->
+<div class="title-container">
+    <div class="title-base">
+        <div class="title-picture">
+            <img src="Ressources/Pictures/Kategorieseiten/Transparenz/Transparenz-head.jpg" alt="" width = 100%>
+        </div>
+
+        <!--Auch wenn das eigentliche Styling aus der standatisierten CSS-Datei resultiert, muss hier noch einmal
+        ein spezifisches Styling für die Überschrift gelten, weswegen dem Div der Überschrift in der CSS-Datei ein anderes
+        Styling zugewiesen wird. Das Wort "Transparenz" ist zu lang als dass das Styling in der standartisierten CSS-Datei gelten könnte. -->
+        <div class="title-headline-specific">
+            <h1>TRANSPARENZ</h1>
+        </div>
+    </div>
+
+    <!--Die animierten Wellen.-->
+    <div class="anim-wave-container">
+        <div class="waves">
+            <canvas id="myCanvas1" class = "anim-wave"></canvas>
+            <script>addBigWave(myCanvas1,false);</script>
+            <canvas id="myCanvas2" class = "anim-wave"></canvas>
+            <script>addBigWave(myCanvas2);</script>
+            <canvas id="myCanvas3" class = "anim-wave"></canvas>
+            <script>addBigWave(myCanvas3);</script>
+        </div>
+    </div>
+</div>
+
+<!--Wie gewünscht, benutzen wir die semantischen Tags von HTML. Dies hat auch einen konkreten Vorteil:
+   Im Standard-CSS einer jeden Seite wird die Main-Sektion auf 90% gesetzt, sodass neben dem ganzen Content
+   immer der gleiche Abstand zum Bildrand besteht-->
+<main>
+
+    <!-- Die thematische Einheit zum Oberbegriff "Lieferanten". -->
+    <section class="lieferanten">
+        <h1>Lieferanten</h1>
+
+        <!-- Bild und Text befinden sich nebeneinander in einer Flexbox. -->
+        <div class="lieferanten-flex-container">
+            <img class="lieferanten-picture" src="Ressources/Pictures/Kategorieseiten/Transparenz/Lieferanten.jpg" alt="" width= 45%>
+
+            <div class="lieferanten-text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur Stet clita kasd gubergren, no sea takimata sanctus est
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur Stet clita kasd gubergren, no sea takimata sanctus est
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur Stet clita kasd gubergren, no sea takimata sanctus est
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                </p>
+            </div>
+        </div>
+
+        <!-- Die "Mehr Lesen"-Buttons auf der Seite erhalten quasi alle dasselbe Grundstyling.--->
+        <div class="lieferanten-button-container">
+            <a href="lieferanten.html"><button class = "read-more">Mehr lesen</button></a>
+        </div>
+    </section>
+
+    <!-- Die thematische Einheit zum Oberbegriff "Fairtrade". -->
+    <section class="fairtrade">
+        <h1>Fairtrade</h1>
+        <img src="Ressources/Pictures/Kategorieseiten/Transparenz/Fairtrade.jpg" alt="" width=100%>
+
+        <!-- Der Text über dem Bild von der Farmerin. -->
+        <div class = "fairtrade-overlay">
+            <h1>Wir achten drauf!</h1>
+            <p>Natürlich brauchen unsere Produkte teils exotische Zutaten. Uns läge dabei aber nichts ferner als Ausbeutung der im Ausland beschäftigten Kräfte.
+                Wir setzen uns ganz klar für deutlich mehr als menschenwürdige Arbeitsbedingungen ein!</p>
+        </div>
+
+        <!-- Die Buttons haben zwar alle dasselbe Grundstyling (deswegen die Klasse "read-more"), müssen jedoch einzeln positioniert werden,
+         weswegen diese alle eine unterschiedliche Klasse zur Positionierung haben.-->
+        <div class="fairtrade-button-container">
+            <a href="fairtrade.html"><button class = "read-more">Mehr lesen</button></a>
+        </div>
+    </section>
+
+    <!-- Die thematische Einheit zum Oberbegriff "Nachhaltigkeit". -->
+    <section class="nachhaltigkeit">
+        <h1>Nachhaltigkeit</h1>
+        <img src="Ressources/Pictures/Kategorieseiten/Transparenz/umweltschutz.jpg" alt="" width=100%>
+
+        <!-- Der Text über dem Bild der Hand. -->
+        <div class = "nachhaltigkeit-overlay">
+            <h1>Nichts wichtiger als das</h1>
+            <p>Und das ist keine Ironie.
+                Wenn wir uns eines geschworen haben, dann unser größtes Urprinzip:
+                der Schutz unserer Welt steht für uns im Fokus. Dafür ziehen für alle Register -
+                sei es Produktion, Verpackung oder gar Lieferung.</p>
+        </div>
+
+        <!-- Die Buttons haben zwar alle dasselbe Grundstyling (deswegen die Klasse "read-more"), müssen jedoch einzeln positioniert werden,
+         weswegen diese alle eine unterschiedliche Klasse zur Positionierung haben.-->
+        <div class="nachhaltigkeit-button-container">
+            <a href="nachhaltigkeit.html"><button class = "read-more">Mehr lesen</button></a>
+        </div>
+    </section>
+</main>
+
+    <!--Der gesamte Footer, dieser sieht auch auf jeder Website gleich aus.-->
+    <footer>
+        <div class="footer-content">
+            <!--Der Footer ist im Prinzip eine Flexbox, in welcher der Inhalt verteilt wird.-->
+            <div class="footer-flex">
+                <img class = "footer-logo" src="Ressources/Pictures/Startseite/Logo&Text.svg" alt=""width="15%">
+
+                <!--Die Div-Elemente mit der HTML-Klasse "footer-col" haben alle dasselbe Styling, weswegen diese alle
+                gleich auf der Website erscheinen. Alle mit "footer-col" versehenen Elemente sind die Spalten innerhalb des Footers,
+                haben eine hervorgehobene Überschrift und darunterliegende, gleichaussehende Footer-Links.-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Ueber uns.html"><span class="footer-heading">Über uns</span></a></li>
+                        <li><a href="geschichte.html">Geschichte</a></li>
+                        <li><a href="werte.html">Werte</a></li>
+                        <li><a href="karriere.html">Karriere</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Transparenz.html"><span class="footer-heading">Transparenz</span></a></li>
+                        <li><a href="lieferanten.html">Lieferanten</a></li>
+                        <li><a href="fairtrade.html">Fairtrade</a></li>
+                        <li><a href="nachhaltigkeit.html">Nachhaltigkeit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Produktübersicht.html"><span class="footer-heading">Produkte</span></a></li>
+                        <li><a href="Vegan Whey.html">Vegan Whey</a></li>
+                        <li><a href="Vegan Booster.html">Vegan Boost</a></li>
+                        <li><a href="Vegan Nutrition.html">Vegan Nutrition</a></li>
+                        <li><a href="Vegan Vitamin.html">Vegan Vitamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="warenkorb.html"><span class="footer-heading">Einkaufs-<br>wagen</span></a></li>
+                        <li><a href="checkout.html">Check-Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="Revitalize Berater.html"><span class="footer-heading">Berater</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="contact.html"><span class="footer-heading">Kontakt</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Die Trennlinie zwischen den Footer-Spalten und dem unteren Teil mit Social-Media-Icons-->
+            <hr size=2 color=white>
+
+            <div class="footer-last-line">
+                <div class="footer-icon-line">
+                    <a href="http://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="http://www.youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Das nav-Tag wird am oberen Bildschirmrand gerfixed und auf die gesamte Breite gezogen.
+ Die Inhalte darin wird zentriert und eine Transition definiert, die beim Farbübergang beim
+ Scrollen greift.*/
+nav {
+    position: fixed;
+    width: 100%;
+    font-size: 1.3vw;
+    z-index: 15;
+    text-align: center;
+    transition: background-color 0.4s ease-out;
+}
+
+/* Diese Klasse wird mittels JavaScript angesprochen, wenn gescrollt wird.
+ Durch diese Klasse verändert sich die Hintergrundfarbe beim Scrollen.*/
+nav.scroll {
+    background-color: #43DEB9;
+}
+
+/* Diese Klasse wird mittels JavaScript den Navlinks angehängt, wenn gescrollt wird.
+ So verfärben sich diese weiß, damit sie auf dem sich in das grün/blau verfärbenden Hintergrund sichtbar sind.*/
+.scroller {
+    color: white;
+}
+
+/* Die Farbe der Navlinks, sofern nicht nach unten gescrollt worden ist,
+ist weiß und sämtliches Standard-Styling wird entfernt. */
+nav a {
+    color: #43DEB9;
+    text-decoration: none;
+}
+
+/* Wenn über Navlinks gehovert wird, dann erhalten diese eine andere Farbe. */
+nav a:hover {
+    color: #27734f;
+}
+
+/* Die Unordered List, die alle Navlinks und das Logo hält, verliert jedes Standard-Styling. */
+nav ul{
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+}
+
+/* Die Navlinks werden mittels "inline-block" nebeneinander und vertikal mittig platziert. */
+nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2% 2% 1% 0;
+}
+
+/* Das Logo in der Navbar wird in der Breite vergrößert und Margin und Padding entfernt. */
+nav img {
+    padding: 0;
+    margin: 0;
+    width: 3vw;
+}
+
+/* Das Warenkorb-Icon wird absolut in der oberen Ecke platziert. */
+.shopping-cart-icon {
+    position: absolute;
+    display: inline-block;
+    width: 1.8%;
+    top: 42%;
+    left: 93%;
+}
+
+/* Um das Problem zu umgehen, dass sich die Farbe des Warenkorbs schwer ändern lässt,
+ nutzen wir dafür eine zusätzliche Klasse. Wenn nach unten gescrollt wird, wird im JavaScript dem grünen Warenkorb
+ diese Klasse zugewiesen, so wird dieser unsichtbar.
+  Scrollt man wieder nach oben, passiert selbiges dem weißen Warenkorb und dem Grünen wird die
+  Klasse wieder entzogen. */
+.nonactive {
+    display: none;
+}
+
+/* Das Styling der Anzeige an Inhalten, die im Warenkorb liegt.
+ Es ist ein kleiner Kreis neben dem Warenkorb.*/
+.amount-of-orders {
+    position: absolute;
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    top: 40%;
+    left: 95%;
+    border-radius: 50%;
+    background-color: #43DEB9;
+}
+
+/* Der Text wird in den Kreis reingeschoben. */
+.amount-of-orders p {
+    position: relative;
+    color: white;
+    bottom: 35%;
+}
+
+/* Hier wird die Farbänderung des Kreises angegeben.
+ Diese Klasse bekommt dieser zugewiesen, wenn man unten gescrollt wird. */
+.amount-color-change {
+    background-color: white;
+}
+
+/* Wird die obige Klasse zugewiesen, gilt dies für den Text. */
+.amount-color-change p {
+    color: #43DEB9;
+}

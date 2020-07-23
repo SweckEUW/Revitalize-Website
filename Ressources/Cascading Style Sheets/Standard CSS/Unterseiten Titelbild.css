@@ -1,0 +1,36 @@
+.title-container {
+    position: relative;
+    margin: 8% auto 0 auto;
+    width: 100%;
+}
+
+.title-base {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.title-headline {
+    position: absolute;
+    bottom: 58%;
+    right: 29%;
+}
+
+.title-headline h1 {
+    color: white;
+    font-size: 12.5vw;
+}
+
+.anim-wave-container{
+    position: absolute;
+    top: 70%;
+}
+
+.waves {
+    position: absolute;
+    bottom: 34%;
+    z-index: 12;
+}
+
+.anim-wave {
+    position: absolute;
+}

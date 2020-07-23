@@ -1,0 +1,74 @@
+/* Der Footer bekommt Roboto als Schriftart und eine grün/blaue Hintergrundfarbe. */
+footer {
+    font-family: Roboto, sans-serif;
+    font-size: 1vw;
+    background-color: #43DEB9;
+    margin-top: 5%;
+}
+
+/* Der Footer-Content bewegt sich in einem Rahmen von 90% und wird zentriert.
+Somit besteht zwischen dem Content im Footer und dem Bildschirmrand derselbe Abstand wie zwischen
+dem Content im Main-Tag und den Bildschirmrändern.*/
+.footer-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Die Spalten des Footers befinden sich in einer Flexbox. */
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Das Logo auf der linken Seite wird aus ästhetischen Gründen etwas von dem oberen Rand entfernt
+ und in seiner Höhe verändert.*/
+.footer-logo {
+    margin-top: 1.2%;
+    height: 10%;
+}
+
+/* Die Überschriften innerhalb der Spalten werden Weiß und etwas größer. */
+.footer-heading {
+    color: white;
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+/* Das Styling der Spalten innerhalb des Footers.
+Diese werden vertikal an der obersten Kante ausgerichtet.*/
+.footer-col {
+    vertical-align: top;
+    flex-grow: 1;
+}
+
+/* Die Elemente der Unordered List, die dem Grundaufbau einer jeden Footer-Spalte dient,
+verlieren ihr Standard-Styling und bekommen 5% Padding.*/
+.footer-col li {
+    list-style: none;
+    padding: 5%;
+}
+
+/* Jeder Punkt der Listen ist ein Link und verliert das damit einhergehende Standard-Styling. */
+.footer-col a {
+    color: #4D4D4D;
+    text-decoration: none;
+}
+
+/* Die Zeile unter den Spalten gewinnt etwas Padding am unteren Rand und schafft so mehr Entfernung zu diesem.
+ Dies wird per Padding geregelt, damit nach unten hin der Hintergrund weiter grün bleibt.*/
+.footer-last-line {
+    padding-bottom: 1.5%;
+}
+
+/* Die Icons für Social-Media-Links werden weiß und etwas größer.*/
+.footer-icon-line {
+    color: white;
+    font-size: 1.7vw;
+}
+
+/* Hier wird das Link-Styling von den Social-Media-Icons entfernt. */
+.footer-icon-line a {
+    text-decoration: none;
+    color: white;
+}

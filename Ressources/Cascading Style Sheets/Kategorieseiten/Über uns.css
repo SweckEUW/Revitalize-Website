@@ -1,0 +1,136 @@
+/* Hier wird der Hintergrund der gesamten Seite und sein Verhalten zugewiesen
+Der Hintergrund wird unterhalb des Headers platziert, da der Header diesen verdecken würde,
+und wiederholt sich nicht.*/
+html {
+    background-image: url("../../Pictures/Kategorieseiten/Über uns/Background.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 50vw;
+    background-size: 100vw;
+}
+
+/* Die Entfernung des Contents der Seite von der absolut positionierten Welle */
+main {
+    margin-top: 10%;
+}
+
+/* Die Überschriften erster Ordnung innerhalb der Seite werden standardmößig
+auf eine bestimmte Größe und in die Mitte gesetzt. */
+main h1 {
+    font-size: 3.1vw;
+    text-align: center;
+}
+
+/* Das Styling für den Text innerhalb des Abschnitts über die Geschichte.
+Der Container des Textes ist zentriert und in der Breite verkleinert, sodass der Text nicht an den
+Rand des Main-Bereichs stößt. */
+.geschichte-text {
+    width: 80%;
+    margin: 3% auto 0 auto;
+}
+
+/* Der Text unter Geschichte bekommt eine responsive Größe zugewiesen und wird mittig ausgelegt. */
+.geschichte-text p{
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+/* Der Zeitstrahl unter Geschichte bekommt einen Abstand von 4% zur Überschrift. */
+.timeline {
+    margin-top: 4%;
+}
+
+/* Der Container für alle "Mehr lesen"-Buttons. Diese werden immer gleich über dem Inhalt der Sektion positioniert,
+ deshalb erhalten sie alle dasselbe Styling. */
+.button-container {
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Der "Mehr lesen"-Button sieht über die Seite hinweg gleich aus. */
+.read-more {
+    cursor: pointer;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    border: none;
+    outline: none;
+    background: #51E0C4;
+    padding: 1.2% 5%;
+    border-radius: 20px;
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 600;
+}
+
+/* Der Hover-Effekt für den "Mehr lesen"-Button. */
+.read-more:hover {
+    cursor: pointer;
+    background: #32734F;
+}
+
+/* Die Sektion für "Werte" für aus ästhetischen Gründen um 5% nach unten verschoben und auf relative gesetzt. */
+.werte {
+    position: relative;
+    margin-top: 5%;
+}
+
+/* Die Flexbox für Bild und Text unter "Werte" */
+.werte-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Das für den Werte Teil bekommt eine festgesetzte Höhe, sodass die Flexbox das Verhältnis des Bildes nicht ändert. */
+.werte-picture {
+    height: 100%;
+    min-width: 45%;
+}
+
+/* Der Text innerhalb der Flexbox bekommt 2% Abstand vom Bild. */
+.werte-text {
+    margin-left: 2%;
+}
+
+/* Die Größe des Textes wird responsiv festgelegt */
+.werte-text p {
+    font-size: 1.2vw;
+}
+
+/* Die untergeordnete Überschrift über dem Text verliert ihre obere Margin um am Bild anzuschließen,
+ bekommt eine responsive Größe und eine Font-Weight, die Semibold bedeutet. */
+.werte-text h2 {
+    margin-top: 0;
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+/* Die Karriere-Sektion wird aus ästhetischen Gründen 5% nach unten verschoben. */
+.karriere {
+    margin-top: 5%;
+}
+
+/* Die Überschrift unter dem Bild in der Karriere-Sektion verliert ihren Abstand zur darunterliegenden H2-Überschrift. */
+.karriere-head h1 {
+    margin-bottom: 0;
+}
+
+/* Die H2 unter der Überschrift erster Ordnung bekommt eine Font-Weight von Semibold, eine responsive Größe,
+wird mittig zentriert und verliert ihren Abstand zur darüberliegenden Überschrift.*/
+.karriere-head h2 {
+    font-weight: 600;
+    font-size: 2.2vw;
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Der Text unter den beiden Überschriften wird vom Container zentriert,stößt durch die Width nicht an die Ränder
+und wird mittig ausgerichtet.*/
+.karriere-text {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+/* Die Schriftgräße des Textes der Karrieresektion wird responsiv festgelegt. */
+.karriere-text p {
+    font-size: 1.2vw;
+}
